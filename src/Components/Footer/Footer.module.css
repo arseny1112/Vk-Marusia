@@ -1,0 +1,12 @@
+.footer{
+    column-gap: 24px;
+    justify-content: end;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+@media(max-width: 375px){
+    .footer{
+        justify-content: unset;
+    }
+}

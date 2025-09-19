@@ -1,0 +1,174 @@
+.account {
+	padding-top: 64px;
+}
+
+.account h2 {
+	font-size: 48px;
+	font-family: 'Play-Bold';
+	margin-bottom: 64px;
+}
+
+.accountSelect {
+	column-gap: 64px;
+	font-size: 24px;
+	margin-bottom: 64px;
+}
+
+.accountSelect p {
+	cursor: pointer;
+	column-gap: 8px;
+}
+
+.favorites img {
+	max-width: 224px;
+	max-height: 336px;
+	height: 100%;
+	border-radius: 16px;
+}
+
+.favorites button {
+	position: absolute;
+	right: -24px;
+	top: -20px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.favoritesContent {
+	position: relative;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favoritesContent:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.favoritesContent:hover .favoritesBtn {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.favorites {
+	row-gap: 64px;
+	column-gap: 40px;
+	flex-wrap: wrap;
+}
+
+.active {
+	border-bottom: 1.5px solid #DC5DFC;
+	padding-bottom: 8px;
+}
+
+.active svg {
+	fill: white;
+}
+
+.userImg {
+	background-color: #FFFFFF80;
+	border-radius: 30px;
+	width: 60px;
+	height: 60px;
+	font-size: 24px;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+}
+
+.user {
+	align-items: center;
+}
+
+.userWrapper .user:first-child {
+	margin-bottom: 40px;
+}
+
+.userWrapper .user:nth-child(2) {
+	margin-bottom: 64px;
+}
+
+.userInfo {
+	margin-left: 16px;
+}
+
+.userInfoData {
+	border-top: 4px;
+	font-family: 'Play-Bold';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.userWrapper button {
+	background-color: #67A5EB;
+	border-radius: 28px;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+	padding: 16px 48px;
+}
+
+.userWrapper button:hover,
+.userWrapper button:focus {
+	background-color: rgba(69, 82, 110, 1);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.mobileText {
+	display: none;
+}
+
+@media(max-width: 865px) {
+	.account {
+		overflow: hidden;
+	}
+
+	.favorites {
+		display: flex;
+		flex-wrap: nowrap;
+		width: max-content;
+	}
+
+	.accountSelect {
+		margin-bottom: 40px;
+	}
+}
+
+@media(max-width: 570px) {
+	.desktopText {
+		display: none;
+	}
+
+	.mobileText {
+		display: block;
+		font-size: 24px;
+	}
+
+	.accountSelect {
+		column-gap: 24px;
+	}
+
+	.userInfo p:first-of-type {
+		color: rgba(255, 255, 255, 0.5);
+		margin-bottom: 4px;
+		font-size: 14px;
+	}
+
+	.userWrapper button {
+		width: 100%;
+	}
+}
+
+@media(max-width: 375px) {
+	.account {
+		padding-top: 16px;
+		padding-bottom: 232px;
+	}
+
+	.account h2 {
+		font-size: 24px;
+		margin-bottom: 40px;
+	}
+
+	.userWrapper .user:nth-child(2) {
+		margin-bottom: 40px;
+	}
+}

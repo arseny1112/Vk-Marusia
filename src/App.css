@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Play-Bold';
+	src: local('Play-Bold'), url('/src/assets/fonts/Play-Bold.ttf') format('truetype'),
+     url(/src//assets/fonts/Play-Bold.ttf) format('ttf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Play-Regular';
+    src: local('Play-Regular'), url('/src/assets/fonts/Play-Regular.ttf') format('truetype'),
+     url(/src//assets/fonts/Play-Regular.ttf) format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.fade-enter {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.fade-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.fade-exit {
+	opacity: 1;
+}
+
+.fade-exit-active {
+	opacity: 0;
+	transition: opacity 300ms ease;
+}

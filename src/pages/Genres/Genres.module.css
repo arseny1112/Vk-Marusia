@@ -1,0 +1,80 @@
+.genres {
+	padding-top: 64px;
+	padding-bottom: 160px;
+}
+
+.genres h2 {
+	font-family: 'Play-Bold';
+	font-size: 48px;
+	margin-bottom: 64px;
+}
+
+.genresCardItem {
+	flex-direction: column;
+	max-width: 290px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	width: 100%;
+}
+
+.genresCardItem:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.genresCardItem img {
+	max-height: 220px;
+	height: 100%;
+	border-radius: 24px 24px 0 0;
+}
+
+.genresCardItem p {
+	background-color: #0A0B0B;
+	text-align: center;
+	padding: 22px 0 30px 0;
+	border-radius: 0 0 24px 24px;
+}
+
+.genresCards {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 64px;
+}
+
+@media(max-width: 1354px) {
+	.genresCards {
+		justify-content: unset;
+		column-gap: 40px;
+	}
+}
+
+@media(max-width: 720px) {
+	.genresCards {
+		column-gap: 20px;
+		justify-content: center;
+	}
+}
+
+@media(max-width: 691px) {
+	.genresCards {
+		row-gap: 24px;
+		justify-content: center;
+	}
+}
+
+@media(max-width: 515px) {
+	.genres {
+		padding-top: 16px;
+		padding-bottom: 40px;
+	}
+
+	.genres h2 {
+		margin-bottom: 40px;
+		font-size: 34px;
+	}
+}
+
+@media(max-width: 375px) {
+	.genres h2 {
+		font-size: 24px;
+	}
+}

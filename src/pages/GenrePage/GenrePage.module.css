@@ -1,0 +1,48 @@
+.genre {
+	padding-top: 64px;
+	padding-bottom: 160px;
+}
+
+.genre h2 {
+	font-family: 'Play-Bold';
+	font-size: 48px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 64px;
+}
+
+.genre h2 svg {
+	margin-right: 16px;
+}
+
+.genreCards {
+	flex-wrap: wrap;
+	column-gap: 35px;
+	row-gap: 64px;
+	justify-content: center;
+	margin-bottom: 64px;
+}
+
+.genresCardItem {
+	flex-direction: column;
+	max-width: 224px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	width: 100%;
+}
+
+.genresCardItem:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.genresCardItem img {
+	border-radius: 24px;
+}
+
+.genre button {
+	padding: 16px 48px;
+	font-family: 'Play-Bold';
+	background-color: #67A5EB;
+	border-radius: 28px;
+	max-width: 218px;
+}

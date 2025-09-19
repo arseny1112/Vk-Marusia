@@ -1,0 +1,160 @@
+.form {
+	background-color: white;
+	flex-direction: column;
+	max-width: 420px;
+	border-radius: 24px;
+	padding: 64px 40px;
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	color: black;
+	z-index: 9933399;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.formLogo {
+	max-width: 132px;
+	margin-bottom: 40px;
+}
+
+.formInput {
+	padding: 16px;
+	position: relative;
+	max-width: 340px;
+	width: 100%;
+	border: 1px solid #00000066;
+	border-radius: 8px;
+}
+
+.formInput:hover {
+	border: 1px solid rgba(180, 169, 255, 1);
+}
+
+.formInput:focus {
+	border: 1px solid rgba(180, 169, 255, 1);
+}
+
+.formInput svg path {
+	transition: fill 0.3s ease, opacity 0.3s ease;
+}
+
+.formInput:hover svg path,
+  .formInput:focus-within svg path {
+	fill: rgba(180, 169, 255, 1);
+	opacity: 1;
+}
+
+.formInput input {
+	border: none;
+	max-width: 340px;
+	width: 100%;
+	margin-left: 12px;
+	background-color: none;
+}
+
+.formInput input:focus {
+	outline: none;
+}
+
+.errorEmail,
+.errorFirstName,
+.errorLastName,
+.errorPassword,
+.errorConfirmPassword {
+	border: 1px solid red;
+}
+
+.errorEmail svg path,
+.errorFirstName svg path,
+.errorLastName svg path,
+.errorPassword svg path,
+.errorConfirmPassword svg path {
+	fill: red;
+}
+
+.errorText {
+	color: red;
+	font-size: 14px;
+	top: 57px;
+}
+
+.formInput input::placeholder {
+	color: #00000066;
+	font-size: 18px;
+}
+
+.formBtn1 {
+	background-color: #67A5EB;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+	margin-bottom: 24px;
+	margin-top: 24px;
+	color: white;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-family: 'Play-Bold';
+	border-radius: 28px;
+	width: 100%;
+}
+
+.formBtn1:hover,
+.formBtn1:focus {
+	background-color: rgba(69, 82, 110, 1);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.formBtn2 {
+	color: black;
+	font-family: 'Play-Bold';
+}
+
+.formClose {
+	position: absolute;
+	right: -61px;
+	top: 0;
+	padding: 13px 12px 9px 12px;
+	background-color: white;
+	border-radius: 24px;
+}
+
+.formInputs {
+	row-gap: 12px;
+	max-width: 340px;
+	width: 100%;
+	flex-direction: column;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%),
+linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%);
+	z-index: 10;
+}
+
+.modal {
+	z-index: 333333;
+	position: fixed;
+	width: 100%;
+}
+
+@media(max-width: 586px) {
+	.formClose {
+		right: 6px;
+		top: 4px;
+	}
+
+	.formLogo {
+		margin-bottom: 32px;
+	}
+
+	.form {
+		max-width: 335px;
+		padding: 71px 20px 32px 20px;
+	}
+}

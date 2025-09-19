@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Play-Regular';
+}
+
+body{
+  background: linear-gradient(180deg, #0C1A2E 0%, rgba(39, 36, 36, 0.7) 100%), linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%);
+  color: white;
+}
+
+.flex{
+  display: flex;
+}
+
+ul{
+  list-style: none;
+}
+
+a, button{
+  color: unset;
+  text-decoration: unset;
+  cursor: pointer;
+  background-color: unset;
+  border: none;
+}
+
+.container{
+  padding: 0 80px ;
+}
+
+@media(max-width: 964px){
+  .container{
+    padding: 0 40px;
+  }
+}
+
+@media(max-width: 483px){
+  .container{
+    padding: 0 18px;
+  }
+}

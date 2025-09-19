@@ -1,0 +1,282 @@
+.movieInfo {
+	padding-top: 106px;
+	max-width: 600px;
+}
+
+.movieInfoSect2 h1 {
+	font-size: 48px;
+	margin-bottom: 16px;
+	font-family: 'Play-Bold';
+}
+
+.movieInfoSect2 p {
+	color: #B8BCC1;
+	font-size: 24px;
+}
+
+.movieInfoSect2 {
+	margin-bottom: 60px;
+	column-gap: 16px;
+	flex-wrap: wrap;
+	row-gap: 10px;
+}
+
+.movieInfoSect2 button {
+	border-radius: 28px;
+	padding: 16px 48px;
+	font-family: 'Play-Bold';
+	max-height: 56px;
+}
+
+.movieInfoSect2Trailer {
+	background-color: #67A5EB;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movieInfoSect2Trailer:hover,
+  .movieInfoSect2Trailer:focus {
+	background-color: rgba(69, 82, 110, 1);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.movieInfoSect2About {
+	border-radius: 28px;
+	padding: 16px 48px;
+	font-family: 'Play-Bold';
+	max-height: 56px;
+	background-color: #393B3C;
+	border: 1px solid #00000066;
+}
+
+.movieInfoSect2 button:nth-child(3) {
+	background-color: #393B3C;
+	border: 1px solid #00000066;
+	padding: 16px 22px;
+}
+
+.movieInfoSect2 button:nth-child(4) {
+	background-color: #393B3C;
+	border: 1px solid #00000066;
+	padding: 16px 22px;
+}
+
+.movieImg {
+	max-height: 552px;
+	max-width: 680px;
+	margin-left: 20px;
+	border-radius: 16px;
+	margin-top: 32px;
+}
+
+.top {
+	padding-bottom: 120px;
+}
+
+.top h3 {
+	font-family: 'Play-Bold';
+	font-size: 40px;
+	margin-bottom: 64px;
+}
+
+.topList {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 64px;
+}
+
+.topListItem {
+	position: relative;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topListItem:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.topListItem img {
+	max-width: 224px;
+	height: 336px;
+	border-radius: 16px;
+}
+
+.topListItem p {
+	position: absolute;
+	font-family: 'Play-Bold';
+	color: #6A5DC2;
+	font-size: 24px;
+	background-color: white;
+	border-radius: 50px;
+	padding: 10px 24px;
+	top: -19px;
+	left: -25px;
+}
+
+.modalContent {
+	position: fixed;
+	z-index: 9999;
+	top: 50%;
+	display: flex;
+	align-items: flex-start;
+	max-width: 960px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modalContent button {
+	margin-left: 24px;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9998;
+	display: none;
+}
+
+.overlayShow {
+	display: block;
+}
+
+.inFavorites svg {
+	stroke: #B4A9FF;
+}
+
+.inFavorites svg path {
+	fill: #B4A9FF;
+}
+
+button svg {
+	stroke: white;
+}
+
+.swiperBtnPrev,
+  .swiperBtnNext {
+	display: none;
+}
+
+@media(max-width: 1347px) {
+	.topList {
+		justify-content: unset;
+		column-gap: 20px;
+	}
+}
+
+@media(max-width: 865px) {
+	.top {
+		overflow: hidden;
+	}
+
+	.topList {
+		display: flex;
+		flex-wrap: nowrap;
+		width: max-content;
+		margin-left: 33px;
+	}
+
+	.swiperBtnPrev,
+      .swiperBtnNext {
+		display: block;
+	}
+
+	.movieInfoSect2Trailer {
+		width: 100%;
+	}
+
+	.scrollWrapper {
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+		padding-top: 35px;
+	}
+
+	.scrollWrapper::-webkit-scrollbar {
+		display: none;
+	}
+
+	.gradientButton {
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		bottom: 0;
+		width: 40px;
+		z-index: 2;
+		transition: opacity 0.3s ease;
+		cursor: pointer;
+	}
+
+	.rightGradient {
+		right: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent);
+	}
+
+	.scrollContainer:hover .gradientButton {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.scrollContainer {
+		position: relative;
+	}
+
+	.leftGradient {
+		left: 0;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0.9), transparent);
+	}
+}
+
+@media(max-width: 845px) {
+	.movie {
+		flex-direction: column-reverse;
+	}
+
+	.movieInfo {
+		padding-top: 30px;
+	}
+
+	.movieImg {
+		margin-left: 0;
+	}
+}
+
+@media(max-width: 773px) {
+	.modalContent button {
+		display: none;
+	}
+}
+
+@media(max-width: 375px) {
+	.movieInfoSect2 h1 {
+		font-size: 24px;
+	}
+
+	.movieInfoSect2 p {
+		font-size: 18px;
+	}
+
+	.movieInfoSect2 {
+		margin-bottom: 24px;
+		column-gap: 14px;
+	}
+
+	.movieInfoSect2About {
+		padding: 16px 36px;
+	}
+
+	.movieInfoSect2 button:nth-child(3),
+    .movieInfoSect2 button:nth-child(4) {
+		padding: 15px 20px;
+	}
+
+	.top {
+		padding-top: 32px;
+	}
+
+	.top h3 {
+		font-size: 24px;
+	}
+}
